@@ -18,6 +18,10 @@ import "./index.scss"
 
 export default () => (
   <div>
+    <Front />
     <Video />
+    <Album />
+    <Tour />
+    <About />
   </div>
 )

@@ -4,8 +4,6 @@ $primary-font-color: #DEDEDE;
 $secondary-bg-color: #D8D8D8;
 $secondary-font-color: #FF1019;
 
-
-
 $spacing-section: 20px;
 
 body {
@@ -46,10 +44,26 @@ h1 {
 
 .video {
   width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.youtube_container {
+  position: relative;
+
+  .blocking_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 66.25vw;
+  }
 
   iframe {
     width: 100vw;
-    height: 70vh;
+    height: 66.25vw;
+    z-index: -1;
   }
 }
 
