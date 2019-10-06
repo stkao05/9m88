@@ -40,29 +40,6 @@ setTimeout(() => {
   window.onYouTubePlayerAPIReady = onYouTubePlayerAPIReady
   console.log("YT.Player run")
 
-  // debounce
-  function throttle(callback, wait, immediate = false) {
-    let timeout = null
-    let initialCall = true
-
-    return function() {
-      const callNow = immediate && initialCall
-      const next = () => {
-        callback.apply(this, arguments)
-        timeout = null
-      }
-
-      if (callNow) {
-        initialCall = false
-        next()
-      }
-
-      if (!timeout) {
-        timeout = setTimeout(next, wait)
-      }
-    }
-  }
-
   var anchor = document.getElementById("anchor")
   var shifter = document.getElementById("shifter")
 
@@ -74,9 +51,8 @@ setTimeout(() => {
   const hiddenHeight = videoFullHeight - containerHeight
 
   // parallex scrolling
-  document.onscroll = throttle(function() {
+  document.onscroll = function() {
     const rect = anchor.getBoundingClientRect()
-
     if (rect.bottom < 0 || rect.top > window.innerHeight) {
       return
     }
@@ -86,7 +62,8 @@ setTimeout(() => {
 
     const delta = progress / total
     shifter.style.top = -1 * hiddenHeight * delta + "px"
-  }, 100)
+  }
+
 
 
 }, 500)
