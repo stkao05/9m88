@@ -1,7 +1,7 @@
 all: clean build move
 
 clean:
-	rm -r ./docs
+	rm -f -r ./docs
 
 build:
 	npm run build

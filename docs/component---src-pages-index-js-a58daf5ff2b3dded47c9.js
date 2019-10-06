@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{188:function(e,t,a){"use strict";a.r(t);var n=a(0),r=a.n(n);function c(){return r.a.createElement("div",{className:"video"},r.a.createElement("div",{id:"player"}),r.a.createElement("script",{src:"https://www.youtube.com/iframe_api"}),r.a.createElement("script",{src:"./background_video.js"}))}a(189),t.default=function(){return r.a.createElement("div",null,r.a.createElement(c,null))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-a58daf5ff2b3dded47c9.js.map
