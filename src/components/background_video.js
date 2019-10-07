@@ -63,7 +63,4 @@ setTimeout(() => {
     const delta = progress / total
     shifter.style.top = -1 * hiddenHeight * delta + "px"
   }
-
-
-
 }, 500)

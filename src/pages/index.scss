@@ -6,6 +6,12 @@ $secondary-font-color: #FF1019;
 
 $spacing-section: 20px;
 
+@mixin mobile-breakpoint {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -23,11 +29,42 @@ body {
 h1 {
   font-size: 24px;
   font-weight: normal;
+  margin-top: 0px;
+  line-height: 1.25em;
+
+  small {
+    font-size: 20px;
+  }
 }
 
 .light_background {
   background-color: $secondary-bg-color;
   color: $secondary-font-color;
+}
+
+.btn {
+  background-color: $secondary-bg-color;
+  color: $secondary-font-color;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.mobile_show {
+  display: none;
+
+  @include mobile-breakpoint {
+    display: block;
+  }
+}
+
+.mobile_hide {
+  @include mobile-breakpoint {
+    display: none;
+  }
 }
 
 /*------------- sections  ----------- */
@@ -70,10 +107,80 @@ h1 {
 .album {
   display: flex;
   background: $primary-bg-color;
-  padding: $spacing-section;
+  padding: 5vw;
+
+  $max-cover-width: 500px;
 
   .album_cover, .album_info {
     width: 50%;
+  }
+
+  .album_cover {
+    padding-right: 5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    iframe {
+      width: 40vw;
+      height: 40vw;
+      max-width: $max-cover-width;
+      max-height: $max-cover-width;
+      border: 0;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0 0 1em 0;
+    max-width: $max-cover-width;
+    list-style: none;
+    border-bottom: 1px $primary-font-color solid;
+
+    li {
+      padding: 0.5em 0;
+      border-top: 1px $primary-font-color solid;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  @include mobile-breakpoint {
+    $mobile-side-spacing: 5vw;
+
+    display: block;
+    padding: $mobile-side-spacing;
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    .album_cover, .album_info {
+      width: 100%;
+    }
+
+    .album_cover {
+      padding: 0;
+      width: calc(100vw - 2 * #{$mobile-side-spacing});
+      height: calc(100vw - 2 * #{$mobile-side-spacing});
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    ul {
+      width: 100%;
+      max-width: 100%;
+      margin-top: $mobile-side-spacing;
+    }
+
   }
 }
 
