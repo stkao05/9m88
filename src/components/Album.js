@@ -14,9 +14,22 @@ const Bandcamp = () => {
   )
 }
 
+const songs = [
+  "01 Intro - She Is",
+  "02 平庸之上 Beyond Mediocrity",
+  "03 最高品質靜悄悄 Airplane Mode",
+  "04 Aim High",
+  "05 浪費時間 Waste Of Time",
+  "06 廚餘戀人 Leftlovers",
+  "07 愛情雨 Love Rain",
+  "08 九頭身日奈 Nine Head Hinano",
+  "09 Inner",
+  "10 如果可以 If I Could",
+]
+
 export default function Album() {
   return (
-    <section className="album invert_background">
+    <section className="album invert_background section">
       <h1 className="mobile_show">
         Beyond Mediocrity
         <br />
@@ -35,16 +48,9 @@ export default function Album() {
         </h1>
 
         <ul>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
-          <li>02 Beyond Mediocrity</li>
+          {songs.map(name => {
+            return <li>{name}</li>
+          })}
         </ul>
 
         <div className="btn_group">

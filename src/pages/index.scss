@@ -6,6 +6,9 @@ $secondary-font-color: #FF1019;
 
 $spacing-section: 20px;
 
+$section-spacing-mobile: 5vw;
+$section-spacing: 5vw;
+
 @mixin mobile-breakpoint {
   @media (max-width: 700px) {
     @content;
@@ -18,6 +21,8 @@ body {
   font-size: 15px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.5em;
+  color: $primary-font-color;
+  background-color: $primary-bg-color;
 }
 
 * {
@@ -45,10 +50,19 @@ h1 {
   background-color: $primary-bg-color;
 }
 
+.section {
+  padding: $section-spacing;
+
+  @include mobile-breakpoint {
+    padding: $section-spacing-mobile;
+  }
+}
+
 .btn {
+  display: inline-block;
   background-color: $secondary-bg-color;
   color: $secondary-font-color;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 0.75em;
   text-decoration: none;
 
   &:hover {
@@ -180,10 +194,7 @@ h1 {
   }
 
   @include mobile-breakpoint {
-    $mobile-side-spacing: 5vw;
-
     display: block;
-    padding: $mobile-side-spacing;
 
     h1 {
       margin-bottom: 0.5em;
@@ -195,8 +206,8 @@ h1 {
 
     .album_cover {
       padding: 0;
-      width: calc(100vw - 2 * #{$mobile-side-spacing});
-      height: calc(100vw - 2 * #{$mobile-side-spacing});
+      width: calc(100vw - 2 * #{$section-spacing-mobile});
+      height: calc(100vw - 2 * #{$section-spacing-mobile});
 
       iframe {
         width: 100%;
@@ -209,14 +220,12 @@ h1 {
     ul {
       width: 100%;
       max-width: 100%;
-      margin-top: $mobile-side-spacing;
+      margin-top: $section-spacing-mobile;
     }
   }
 }
 
 .tour {
-  padding: 5vw;
-
   table {
     text-align: left;
     width: 100%;
@@ -246,13 +255,38 @@ h1 {
     }
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    border-top: 1px white solid;
 
+    li {
+      border-bottom: 1px white solid;
+      padding: 1em 0;
+
+      .btn {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  @include mobile-breakpoint {
+    ul {
+      display: block;
+    }
+
+    table {
+      display: none;
+    }
+  }
 }
 
 .about {
   display: flex;
   width: 100vw;
   overflow: hidden;
+  padding: 0;
 
   .img_container {
     width: 50%;
@@ -266,9 +300,29 @@ h1 {
     width: 50%;
     padding: $spacing-section;
     text-align: left;
+    padding: $section-spacing;
 
     p {
       max-width: 600px;
+    }
+  }
+
+  @include mobile-breakpoint {
+    flex-direction: column;
+    padding: 0;
+
+    .content, .img_container {
+      width: 100%;
+    }
+
+    .content {
+      padding: 0;
+      order: 0;
+      padding: $section-spacing-mobile;
+    }
+
+    .img_container {
+      order: 1;
     }
   }
 }
