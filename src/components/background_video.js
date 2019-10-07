@@ -18,6 +18,7 @@ setTimeout(() => {
       playerVars: {
         autoplay: 0,
         autohide: 1,
+        loop: 1,
         modestbranding: 1,
         rel: 0,
         showinfo: 0,

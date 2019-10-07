@@ -16,7 +16,7 @@ const Bandcamp = () => {
 
 export default function Album() {
   return (
-    <section className="album">
+    <section className="album invert_background">
       <h1 className="mobile_show">
         Beyond Mediocrity
         <br />

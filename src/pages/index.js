@@ -4,6 +4,7 @@ import Album from "../components/Album.js"
 import About from "../components/About.js"
 import Tour from "../components/Tour.js"
 import Video from "../components/Video.js"
+import Header from "../components/Header.js"
 import "./index.scss"
 
 //export default () => (
@@ -18,6 +19,7 @@ import "./index.scss"
 
 export default () => (
   <div>
+    <Header />
     <Front />
     <Video />
     <Album />
