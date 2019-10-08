@@ -57,6 +57,7 @@ a[name] {
   }
 }
 
+
 .light_background {
   background-color: $secondary-bg-color;
   color: $secondary-font-color;
@@ -177,9 +178,6 @@ a[name] {
     margin-top: -0.5 * $length;
     margin-left: -0.5 * $length;
 
-    @include mobile-breakpoint {}
-
-
     img {
       width: 100%;
     }
@@ -222,34 +220,20 @@ a[name] {
 
 .video {
   width: 100vw;
-
-  .youtube_container {
-    position: relative;
-
-    .blocking_overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 100vw;
-      height: 66.25vw;
-    }
-
-    iframe {
-      width: 100vw;
-      height: 66.25vw;
-      z-index: -1;
-    }
-  }
 }
 
 .parallex {
   width: 100vw;
 
   // parallex set the height, which smaller than the background
-  height: 30vw;
+  height: 40vw;
   overflow: hidden;
   background-color: black;
+
+  @include mobile-breakpoint {
+    height: 40vh;
+
+  }
 }
 
 .parallex_background {

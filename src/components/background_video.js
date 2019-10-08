@@ -54,7 +54,7 @@ const parallex = () => {
 }
 
 const _parallex = container => {
-  const background = document.querySelector(".parallex_background")
+  const background = container.querySelector(".parallex_background")
 
   document.onscroll = function() {
     const backgroundRect = background.getBoundingClientRect()
