@@ -167,6 +167,10 @@ a[name] {
   height: 100vh;
   position: relative;
 
+  @include mobile-breakpoint {
+    height: 95vh;
+  }
+
   .cover {
     $length: 70vh;
 
@@ -204,6 +208,15 @@ a[name] {
       top: 0.5em;
       right: 0.5em;
     }
+
+    @include mobile-breakpoint {
+      $length: 80vw;
+
+      height: $length;
+      width: $length;
+      margin-top: -0.5 * $length;
+      margin-left: -0.5 * $length;
+    }
   }
 
   .background {
@@ -232,7 +245,6 @@ a[name] {
 
   @include mobile-breakpoint {
     height: 40vh;
-
   }
 }
 

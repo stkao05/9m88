@@ -1,11 +1,7 @@
 /* eslint-disable */
-import VideoBackground from "./video_background/VideoBackground"
-
 setTimeout(() => {
   youtube()
   parallex()
-  trying()
-
 }, 500)
 
 const youtube = () => {

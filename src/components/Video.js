@@ -17,7 +17,7 @@ export default function Video() {
       <div className="blocking_overlay" />
 
       <div className="parallex_background">
-        <div id="myContainer" />
+        <Youtube />
       </div>
     </div>
   )
