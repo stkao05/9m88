@@ -114,6 +114,48 @@ h1 {
   height: 100vh;
   position: relative;
 
+  .cover {
+    $length: 70vh;
+
+    height: $length;
+    width: $length;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5 * $length;
+    margin-left: -0.5 * $length;
+
+    @include mobile-breakpoint {}
+
+
+    img {
+      width: 100%;
+    }
+
+    .title {
+      color: $secondary-font-color;
+      visibility: hidden;
+    }
+
+    &:hover {
+      .title {
+        visibility: visible;
+      }
+    }
+
+    .en {
+      position: absolute;
+      top: 0.5em;
+      left: 0.5em;
+    }
+
+    .zh {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+    }
+  }
+
   .background {
     width: 100%;
     height: 100%;
@@ -147,14 +189,12 @@ h1 {
   }
 }
 
-
-
 .parallex {
   width: 100vw;
+
   // parallex set the height, which smaller than the background
   height: 30vw;
   overflow: hidden;
-
   background-color: black;
 }
 
@@ -166,9 +206,6 @@ h1 {
     width: 100vw;
   }
 }
-
-
-
 
 /* -------------------------------- */
 
