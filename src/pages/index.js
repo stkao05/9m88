@@ -8,15 +8,11 @@ import Header from "../components/Header.js"
 import Footer from "../components/Footer.js"
 import "./index.scss"
 
-//export default () => (
-  //<div>
-    //<Front />
-    //<Video />
-    //<Album />
-    //<Tour />
-    //<About />
-  //</div>
-//)
+
+//export default () => {
+	//return <Video />
+//}
+
 
 export default () => (
   <div>
