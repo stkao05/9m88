@@ -7,7 +7,7 @@ export default function About() {
         <img src="./images/about_9m88.png" alt="9m88" />
       </div>
 
-      <div className="content">
+      <div className="content invert_background">
         <h1>About 9m88</h1>
         <p>
           9m88，90 後台北女子，新生代創作音樂人。音樂風格深受R&B、Neo
