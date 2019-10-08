@@ -1,6 +1,14 @@
 /* eslint-disable */
+import VideoBackground from "./video_background/VideoBackground"
 
 setTimeout(() => {
+  youtube()
+  parallex()
+  trying()
+
+}, 500)
+
+const youtube = () => {
   // loads the IFrame Player API code asynchronously.
   var tag = document.createElement("script")
   tag.src = "https://www.youtube.com/player_api"
@@ -44,9 +52,7 @@ setTimeout(() => {
 
   window.onYouTubePlayerAPIReady = onYouTubePlayerAPIReady
   console.log("YT.Player run")
-
-  parallex()
-}, 500)
+}
 
 const parallex = () => {
   const containers = document.querySelectorAll(".parallex")
@@ -74,4 +80,12 @@ const _parallex = container => {
     const delta = (1 - scrollProgress) * hiddenLength
     background.style.top = -1 * delta + "px"
   }
+}
+
+const trying = () => {
+  const config = {
+    container: document.documentElement.querySelector("#myContainer"),
+    url: "https://www.youtube.com/watch?v=dimqEPg0NpE",
+  }
+  const myVideoBackground = new VideoBackground(config)
 }
