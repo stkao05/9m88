@@ -124,30 +124,53 @@ h1 {
   }
 }
 
+/* -------------------------------- */
+
 .video {
-  width: 100vw;
-  height: 60vh;
-  overflow: hidden;
+  .youtube_container {
+    position: relative;
+
+    .blocking_overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100vw;
+      height: 66.25vw;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 66.25vw;
+      z-index: -1;
+    }
+  }
 }
 
-.youtube_container {
+
+
+.parallex {
+  width: 100vw;
+  // parallex set the height, which smaller than the background
+  height: 30vw;
+  overflow: hidden;
+
+  background-color: black;
+}
+
+.parallex_background {
+  width: 100vw;
   position: relative;
 
-  .blocking_overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  img {
     width: 100vw;
-    height: 66.25vw;
-  }
-
-  iframe {
-    width: 100vw;
-    height: 66.25vw;
-    z-index: -1;
   }
 }
+
+
+
+
+/* -------------------------------- */
 
 .album {
   display: flex;
