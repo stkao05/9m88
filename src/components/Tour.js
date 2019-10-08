@@ -1,5 +1,23 @@
 import React from "react"
 
+const events = [
+  {
+    time: "09 October 2019",
+    venue: "The Wall Live House 這牆音樂藝文展演空間",
+    location: "Taipei, Taiwan",
+  },
+  {
+    time: "19 October 2019",
+    venue: "Pepsi Center",
+    location: "Denver, CO",
+  },
+  {
+    time: "01 November 2019",
+    venue: "EagleBank Arena",
+    location: "Fairfax, VA",
+  },
+]
+
 export default function Tour() {
   return (
     <div className="tour light_background section">
@@ -15,51 +33,39 @@ export default function Tour() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>19 Dec 19, 20 pm</td>
-            <td>The Fox Theater Pomona</td>
-            <td>Philadelphia, PA, United States</td>
-            <td className="ticket">
-              <a className="btn btn_invert" href="">
-                Ticket
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>19 Dec 19, 20 pm</td>
-            <td>The Fox Theater Pomona</td>
-            <td>Philadelphia, PA, United States</td>
-            <td className="ticket">
-              <a className="btn btn_invert" href="">
-                Ticket
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>19 Dec 19, 20 pm</td>
-            <td>The Fox Theater Pomona</td>
-            <td>Philadelphia, PA, United States</td>
-            <td className="ticket">
-              <a className="btn btn_invert" href="">
-                Ticket
-              </a>
-            </td>
-          </tr>
+          {events.map(event => {
+            return (
+              <tr>
+                <td>{event.time}</td>
+                <td>{event.venue}</td>
+                <td>{event.location}</td>
+                <td className="ticket">
+                  <a className="btn btn_invert" href="">
+                    Ticket
+                  </a>
+                </td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
 
       <ul>
-        <li>
-          <div className="event_time"> 19 Dec 19, 20 pm</div>
-          <div className="event_location">Philadelphia, PA, United States</div>
-          <div className="event_venue">The Fox Theater Pomona</div>
+        {events.map(event => {
+          return (
+            <li>
+              <div className="event_time"> {event.time}</div>
+              <div className="event_venue">{event.venue}</div>
+              <div className="event_location">{event.location}</div>
 
-          <div>
-            <a className="btn btn_invert" href="">
-              Ticket
-            </a>
-          </div>
-        </li>
+              <div>
+                <a className="btn btn_invert" href="">
+                  Ticket
+                </a>
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )
