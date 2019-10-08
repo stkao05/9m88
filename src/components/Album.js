@@ -30,6 +30,8 @@ const songs = [
 export default function Album() {
   return (
     <section className="album invert_background section">
+      <a name="section_album"></a>
+
       <h1 className="mobile_show">
         Beyond Mediocrity
         <br />

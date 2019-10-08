@@ -8,12 +8,12 @@ export default function Header() {
         <Logo />
 
         <div className="left link_group">
-          <a href="">Album</a>
-          <a href="">Tour</a>
+          <a href="#section_album">Album</a>
+          <a href="#section_tour">Tour</a>
         </div>
         <div className="right link_group">
           <a href="">Shop</a>
-          <a href="">About</a>
+          <a href="#section_about">About</a>
         </div>
       </nav>
     </div>

@@ -3,6 +3,8 @@ import React from "react"
 export default function About() {
   return (
     <div className="about invert_background section">
+      <a name="section_about"></a>
+
       <div className="img_container">
         <img src="./images/about_9m88.png" alt="9m88" />
       </div>

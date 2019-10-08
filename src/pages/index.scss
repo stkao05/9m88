@@ -44,6 +44,19 @@ a {
   text-decoration: none;
 }
 
+// site anchor link
+a[name] {
+  position: relative;
+  top: -50vh;
+}
+
+@include mobile-breakpoint {
+  a[name] {
+    position: relative;
+    top: 5vh;
+  }
+}
+
 .light_background {
   background-color: $secondary-bg-color;
   color: $secondary-font-color;

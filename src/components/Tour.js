@@ -22,6 +22,7 @@ export default function Tour() {
   return (
     <div className="tour light_background section">
       <h1>Tour</h1>
+      <a name="section_tour"></a>
 
       <table>
         <thead>
