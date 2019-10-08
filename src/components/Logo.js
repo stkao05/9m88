@@ -15,7 +15,7 @@ export default function Logo() {
         fill-rule="evenodd"
       >
         <g
-          id="Mean"
+          id="logo_main"
           transform="translate(-657.000000, -22.000000)"
           fill="#FFFFFF"
           fill-rule="nonzero"

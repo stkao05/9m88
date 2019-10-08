@@ -40,6 +40,10 @@ h1 {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .light_background {
   background-color: $secondary-bg-color;
   color: $secondary-font-color;
@@ -96,17 +100,52 @@ h1 {
   top: 0;
   left: 0;
   padding: 1em 0;
-  display: flex;
   width: 100%;
   z-index: 100;
-  justify-content: center;
+  background: transparent;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .link_group {
+    position: absolute;
+    top: 0;
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  a {
+    color: $primary-font-color;
+    display: inline-block;
+    padding: 0 1em;
+    visibility: hidden;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #logo_main {
+    fill: $primary-font-color;
+  }
 
   &:hover {
     color: $primary-font-color;
     background-color: $primary-bg-color;
-  }
 
-  svg {}
+    a {
+      visibility: visible;
+    }
+  }
 }
 
 .front {
