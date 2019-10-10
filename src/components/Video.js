@@ -3,22 +3,24 @@ import "./background_video.js"
 import { Youtube } from "./VideoSources"
 
 export default function Video() {
-  //return (
-  //<div className="video parallex">
-  //<div className="blocking_overlay" />
-
-  //<div className="parallex_background">
-  //<img src="./video_bg.jpg" alt="" />
-  //</div>
-  //</div>
-  //)
   return (
     <div className="video parallex">
       <div className="blocking_overlay" />
 
       <div className="parallex_background">
-        <Youtube />
+        <video className="direct_video" autoplay="1" loop muted>
+          <source src="./aim_high.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   )
+  //return (
+  //<div className="video parallex">
+  //<div className="blocking_overlay" />
+
+  //<div className="parallex_background">
+  //<Youtube />
+  //</div>
+  //</div>
+  //)
 }
