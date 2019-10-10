@@ -24,8 +24,8 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="./background_video.js"></script>
       </body>
+      <script src="./background_video.js" />
     </html>
   )
 }
