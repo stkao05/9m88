@@ -33,6 +33,7 @@ const youtube = () => {
         controls: 0,
         disablekb: 1,
         enablejsapi: 1,
+        playsinline: 1,
         iv_load_policy: 3,
       },
       events: {
