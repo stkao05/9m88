@@ -2,7 +2,7 @@
 setTimeout(() => {
   youtube()
   parallex()
-}, 500)
+}, 100)
 
 const youtube = () => {
   // loads the IFrame Player API code asynchronously.
@@ -38,6 +38,7 @@ const youtube = () => {
       },
       events: {
         onReady: onPlayerReady,
+        onStateChange: onPlayerStateChange,
       },
     })
   }
@@ -47,8 +48,13 @@ const youtube = () => {
     event.target.mute()
   }
 
+  function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING) {
+          document.querySelector(".video.parallex").classList.add("playing")
+      }
+  }
+
   window.onYouTubePlayerAPIReady = onYouTubePlayerAPIReady
-  console.log("YT.Player run")
 }
 
 const parallex = () => {
