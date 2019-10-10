@@ -81,6 +81,8 @@
     }
   }
 
-  setupYoutube()
-  parallex()
+  setTimeout(() => {
+    setupYoutube()
+    parallex()
+  }, 100)
 })()

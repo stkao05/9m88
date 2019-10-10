@@ -25,7 +25,6 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      <script src="./background_video.js" />
     </html>
   )
 }
