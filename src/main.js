@@ -6,25 +6,27 @@
     var header = document.querySelector(".expansion_header")
     var headerHeight
 
+    function calcHeight() {
+      var h
+      header.style.zIndex = -1
+      header.style.height = "auto"
+      h = header.clientHeight
+      header.style.zIndex = ""
+      header.style.height = ""
+      return h
+    }
+
     window.addEventListener("resize", function() {
       if (window.innerWidth <= BREAKPOINT) {
-        // calculate height
-        header.style.zIndex = -1
-        header.style.height = "auto"
-        var headerHeight = header.clientHeight
-        header.style.zIndex = ""
-        header.style.height = ""
+        headerHeight = calcHeight()
       } else {
         header.style.height = ""
       }
     })
 
-    // calculate height
-    header.style.zIndex = -1
-    header.style.height = "auto"
-    var headerHeight = header.clientHeight
-    header.style.zIndex = ""
-    header.style.height = ""
+    if (window.innerWidth <= BREAKPOINT) {
+      headerHeight = calcHeight()
+    }
 
     menu.addEventListener("click", function() {
       if (header.classList.contains("on")) {
