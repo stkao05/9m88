@@ -1,6 +1,14 @@
 footer {
   padding: 2em;
 
+  .contact {
+    color: $secondary-font-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .copyright {
     color: #808080;
   }
