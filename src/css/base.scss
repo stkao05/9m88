@@ -78,13 +78,13 @@ a {
 // site anchor link
 a[name] {
   position: relative;
-  top: -50vh;
+  top: -60px;
 }
 
 @include mobile-breakpoint {
   a[name] {
     position: relative;
-    top: 5vh;
+    top: -5vh;
   }
 }
 

@@ -28,14 +28,26 @@
       headerHeight = calcHeight()
     }
 
+    function closeHeader() {
+      header.classList.remove("on")
+      header.style.height = 0 + "px"
+    }
+
     menu.addEventListener("click", function() {
       if (header.classList.contains("on")) {
-        header.classList.remove("on")
-        header.style.height = 0 + "px"
+        closeHeader()
       } else {
         header.classList.add("on")
         header.style.height = headerHeight + "px"
       }
+    })
+
+    document.querySelectorAll(".site_header nav a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        if (header.classList.contains("on")) {
+          closeHeader()
+        }
+      })
     })
   }
 
