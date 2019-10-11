@@ -16,7 +16,7 @@
   "scripts": {
     "tmpl": "mustache src/data.json src/index.mustache -p ./src/logo.mustache > src/index.html",
     "watch": "npm-watch",
-    "build": "parcel build src/index.html --out-dir ./docs --public-url ./9m88"
+    "build": "parcel build src/index.html --out-dir ./docs"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
