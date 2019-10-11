@@ -9,6 +9,8 @@ $spacing-section: 20px;
 $section-spacing-mobile: 5vw;
 $section-spacing: 5vw;
 
+$font-size-heading: 24px;
+
 @mixin mobile-breakpoint {
   @media (max-width: 700px) {
     @content;
@@ -107,48 +109,61 @@ a[name] {
   }
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /*------------- sections  ----------- */
 
 .site_header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1em 0;
+  padding: 1.25em 0;
   width: 100%;
   z-index: 100;
-  background: transparent;
+  background: $primary-bg-color;
 
   nav {
-    display: flex;
-    justify-content: center;
     position: relative;
   }
 
-  .link_group {
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    $width: 126px;
+    $height: 29px;
+
     position: absolute;
-    top: 0;
+    left: 50%;
+    top: 50%;
+    margin-left: -0.5 * $width;
+    margin-top: -0.5 * $height;
+  }
 
-    &.left {
-      left: 0;
-    }
+  .left {
+    float: left;
+  }
 
-    &.right {
-      right: 0;
-    }
+  .right {
+    float: right;
   }
 
   a {
     color: $primary-font-color;
     display: inline-block;
     padding: 0 1em;
-    visibility: hidden;
 
     &:hover {
       text-decoration: underline;
     }
   }
 
-  #logo_main {
+  .logo .fill_part {
     fill: $primary-font-color;
   }
 
@@ -158,6 +173,67 @@ a[name] {
 
     a {
       visibility: visible;
+    }
+  }
+
+  @include mobile-breakpoint {
+    background-color: $primary-bg-color;
+
+    $spacing: $font-size-heading;
+
+
+    padding: $spacing 0;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+
+    .menu {
+      display: block;
+      position: absolute;
+      top: $section-spacing-mobile;
+      right: $section-spacing-mobile;
+    }
+
+    .logo_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      top: 0;
+      left: 0;
+      position: static;
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    .left, .right {
+      float: none;
+    }
+
+    .nav {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: $font-size-heading;
+      padding: 0.5 * $spacing 0;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+      margin-top: $spacing;
+    }
+
+    .logo {
+      display: block;
     }
   }
 }
@@ -170,6 +246,7 @@ a[name] {
   @include mobile-breakpoint {
     height: 95vh;
   }
+
 
   .cover {
     $length: 70vh;
@@ -241,7 +318,6 @@ a[name] {
     left: 0;
     width: 100%;
     height: 100%;
-
     background-color: black;
     z-index: 10;
     opacity: 0;
@@ -254,10 +330,9 @@ a[name] {
 
   &.playing {
     .blocking_overlay {
-      opacity: 0
+      opacity: 0;
     }
   }
-
 }
 
 .parallex {
