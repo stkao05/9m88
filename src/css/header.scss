@@ -1,3 +1,21 @@
+.menu {
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  @include mobile-breakpoint {
+    display: block;
+    position: fixed;
+    top: $section-spacing-mobile;
+    right: $section-spacing-mobile;
+    z-index: 200;
+  }
+}
+
 .site_header {
   position: fixed;
   top: 0;
@@ -5,7 +23,7 @@
   padding: 1.25em 0;
   width: 100%;
   z-index: 100;
-  background: $primary-bg-color;
+  background: transparent;
 
   nav {
     position: relative;
@@ -14,15 +32,12 @@
       color: $primary-font-color;
       display: inline-block;
       padding: 0 1em;
+      visibility: hidden;
 
       &:hover {
         text-decoration: underline;
       }
     }
-  }
-
-  .menu {
-    display: none;
   }
 
   .logo {
@@ -52,6 +67,10 @@
     display: none;
   }
 
+  .background {
+    display: none;
+  }
+
   &:hover {
     color: $primary-font-color;
     background-color: $primary-bg-color;
@@ -62,16 +81,10 @@
   }
 
   @include mobile-breakpoint {
-    background-color: $primary-bg-color;
-
     $spacing: $font-size-heading;
 
-    padding: $spacing 0;
-
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
-    //justify-content: center;
+    padding: 0;
+    background-color: $primary-bg-color;
 
     .menu {
       display: block;
@@ -84,6 +97,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: $spacing;
     }
 
     .logo {
@@ -114,6 +128,7 @@
         width: 100%;
         font-size: $font-size-heading;
         padding: (0.5 * $spacing) 0;
+        visibility: visible;
       }
     }
 
@@ -125,12 +140,21 @@
       display: block;
       text-align: center;
       margin-top: $spacing;
+      margin-bottom: $spacing;
 
       a {
         display: inline-block;
-        margin: 0 0.5 * $spacing;
+        margin: 0 (0.5 * $spacing);
       }
     }
+  }
+}
+
+@include mobile-breakpoint {
+  .expansion_header {
+    height: 0;
+    transition: height $short $easeInOut;
+    overflow: hidden;
   }
 }
 

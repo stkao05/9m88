@@ -1,4 +1,42 @@
 ;(function() {
+  var BREAKPOINT = 700
+
+  function expansion_header() {
+    var menu = document.querySelector(".menu")
+    var header = document.querySelector(".expansion_header")
+    var headerHeight
+
+    window.addEventListener("resize", function() {
+      if (window.innerWidth <= BREAKPOINT) {
+        // calculate height
+        header.style.zIndex = -1
+        header.style.height = "auto"
+        var headerHeight = header.clientHeight
+        header.style.zIndex = ""
+        header.style.height = ""
+      } else {
+        header.style.height = ""
+      }
+    })
+
+    // calculate height
+    header.style.zIndex = -1
+    header.style.height = "auto"
+    var headerHeight = header.clientHeight
+    header.style.zIndex = ""
+    header.style.height = ""
+
+    menu.addEventListener("click", function() {
+      if (header.classList.contains("on")) {
+        header.classList.remove("on")
+        header.style.height = 0 + "px"
+      } else {
+        header.classList.add("on")
+        header.style.height = headerHeight + "px"
+      }
+    })
+  }
+
   function setupYoutube() {
     var playerElementId = "youtube_player"
     var player
@@ -73,8 +111,7 @@
     }
   }
 
-  setTimeout(() => {
-    setupYoutube()
-    parallex()
-  }, 100)
+  setupYoutube()
+  parallex()
+  expansion_header()
 })()
