@@ -1,0 +1,31 @@
+{
+  "album_songs": [
+    "01 Intro - She Is",
+    "02 平庸之上 Beyond Mediocrity",
+    "03 最高品質靜悄悄 Airplane Mode",
+    "04 Aim High",
+    "05 浪費時間 Waste Of Time",
+    "06 廚餘戀人 Leftlovers",
+    "07 愛情雨 Love Rain",
+    "08 九頭身日奈 Nine Head Hinano",
+    "09 Inner",
+    "10 如果可以 If I Could"
+  ],
+  "tours": [
+    {
+      "time": "09 October 2019",
+      "venue": "The Wall Live House 這牆音樂藝文展演空間",
+      "location": "Taipei, Taiwan"
+    },
+    {
+      "time": "19 October 2019",
+      "venue": "Pepsi Center",
+      "location": "Denver, CO"
+    },
+    {
+      "time": "01 November 2019",
+      "venue": "EagleBank Arena",
+      "location": "Fairfax, VA"
+    }
+  ]
+}
