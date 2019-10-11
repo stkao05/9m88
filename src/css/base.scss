@@ -1,0 +1,116 @@
+$primary-bg-color: #ED1C24;
+$primary-font-color: #DEDEDE;
+
+$secondary-bg-color: #D8D8D8;
+$secondary-font-color: #FF1019;
+
+$spacing-section: 20px;
+
+$section-spacing-mobile: 5vw;
+$section-spacing: 5vw;
+
+$font-size-heading: 24px;
+
+@mixin mobile-breakpoint {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5em;
+  color: $primary-font-color;
+  background-color: $primary-bg-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 0px;
+  line-height: 1.25em;
+
+  small {
+    font-size: 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// site anchor link
+a[name] {
+  position: relative;
+  top: -50vh;
+}
+
+@include mobile-breakpoint {
+  a[name] {
+    position: relative;
+    top: 5vh;
+  }
+}
+
+
+.light_background {
+  background-color: $secondary-bg-color;
+  color: $secondary-font-color;
+}
+
+.invert_background {
+  color: $primary-font-color;
+  background-color: $primary-bg-color;
+}
+
+.section {
+  padding: $section-spacing;
+
+  @include mobile-breakpoint {
+    padding: $section-spacing-mobile;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: $secondary-bg-color;
+  color: $secondary-font-color;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn_invert {
+  color: $primary-font-color;
+  background-color: $primary-bg-color;
+}
+
+.mobile_show {
+  display: none;
+
+  @include mobile-breakpoint {
+    display: block;
+  }
+}
+
+.mobile_hide {
+  @include mobile-breakpoint {
+    display: none;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

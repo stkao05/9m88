@@ -1,0 +1,49 @@
+.video {
+  width: 100vw;
+  position: relative;
+
+  .blocking_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10;
+    opacity: 0;
+    transition: all ease-in 250ms;
+  }
+
+  .parallex {
+    z-index: 0;
+  }
+
+  &.playing {
+    .blocking_overlay {
+      opacity: 0;
+    }
+  }
+}
+
+.parallex {
+  width: 100vw;
+
+  // parallex set the height, which smaller than the background
+  height: 40vw;
+  overflow: hidden;
+  background-color: black;
+
+  @include mobile-breakpoint {
+    height: 40vh;
+  }
+}
+
+.parallex_background {
+  width: 100vw;
+  position: relative;
+
+  img {
+    width: 100vw;
+  }
+}
+

@@ -1,0 +1,49 @@
+.about {
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+
+  .img_container {
+    width: 50%;
+
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  .content {
+    width: 50%;
+    padding: $spacing-section;
+    text-align: left;
+    padding: $section-spacing;
+
+    p {
+      max-width: 600px;
+    }
+  }
+
+  @include mobile-breakpoint {
+    flex-direction: column;
+    padding: 0;
+
+    .content, .img_container {
+      width: 100%;
+    }
+
+    .content {
+      padding: 0;
+      order: 0;
+      padding: $section-spacing-mobile;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .img_container {
+      order: 1;
+    }
+  }
+}

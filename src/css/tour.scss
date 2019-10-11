@@ -1,0 +1,60 @@
+.tour {
+  table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      // header for accessibility
+      //display: none;
+      color: white;
+      font-weight: normal;
+    }
+
+    th, td {
+      border-bottom: 1px white solid;
+      padding: 0.5em 0;
+    }
+
+    td {
+      color: $secondary-font-color;
+    }
+
+    td.ticket {
+      padding: 0;
+
+      .btn {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    border-top: 1px white solid;
+
+    li {
+      border-bottom: 1px white solid;
+      padding: 1em 0;
+
+      .btn {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  @include mobile-breakpoint {
+    ul {
+      display: block;
+    }
+
+    table {
+      display: none;
+    }
+  }
+}

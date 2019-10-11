@@ -1,0 +1,68 @@
+.front {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  @include mobile-breakpoint {
+    height: 95vh;
+  }
+
+
+  .cover {
+    $length: 70vh;
+
+    height: $length;
+    width: $length;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5 * $length;
+    margin-left: -0.5 * $length;
+
+    img {
+      width: 100%;
+    }
+
+    .title {
+      color: $secondary-font-color;
+      visibility: hidden;
+    }
+
+    &:hover {
+      .title {
+        visibility: visible;
+      }
+    }
+
+    .en {
+      position: absolute;
+      top: 0.5em;
+      left: 0.5em;
+    }
+
+    .zh {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+    }
+
+    @include mobile-breakpoint {
+      $length: 80vw;
+
+      height: $length;
+      width: $length;
+      margin-top: -0.5 * $length;
+      margin-left: -0.5 * $length;
+    }
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+

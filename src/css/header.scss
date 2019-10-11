@@ -1,0 +1,152 @@
+.site_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.25em 0;
+  width: 100%;
+  z-index: 100;
+  background: $primary-bg-color;
+
+  nav {
+    position: relative;
+
+    a {
+      color: $primary-font-color;
+      display: inline-block;
+      padding: 0 1em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    $width: 126px;
+    $height: 29px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -0.5 * $width;
+    margin-top: -0.5 * $height;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .logo .fill_part {
+    fill: $primary-font-color;
+  }
+
+  .social_sharing {
+    display: none;
+  }
+
+  &:hover {
+    color: $primary-font-color;
+    background-color: $primary-bg-color;
+
+    a {
+      visibility: visible;
+    }
+  }
+
+  @include mobile-breakpoint {
+    background-color: $primary-bg-color;
+
+    $spacing: $font-size-heading;
+
+    padding: $spacing 0;
+
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+
+    .menu {
+      display: block;
+      position: absolute;
+      top: $section-spacing-mobile;
+      right: $section-spacing-mobile;
+    }
+
+    .logo_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      top: 0;
+      left: 0;
+      position: static;
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    .left, .right {
+      float: none;
+    }
+
+    .nav {
+      display: block;
+      width: 100%;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+      margin-top: $spacing;
+
+      a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: $font-size-heading;
+        padding: (0.5 * $spacing) 0;
+      }
+    }
+
+    .logo {
+      display: block;
+    }
+
+    .social_sharing {
+      display: block;
+      text-align: center;
+      margin-top: $spacing;
+
+      a {
+        display: inline-block;
+        margin: 0 0.5 * $spacing;
+      }
+    }
+  }
+}
+
+.social_sharing_sidebar {
+  position: fixed;
+  top: 50%;
+  left: 1em;
+  margin-top: -100px;
+  background: transparent;
+
+  a {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  @include mobile-breakpoint {
+    display: none;
+  }
+}
