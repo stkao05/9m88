@@ -1,40 +1,28 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "9m88",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
   "watch": {
-      "tmpl": {
-          "patterns": ["src"],
-          "extensions": ["mustache"]
-      }
+    "tmpl": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": [
+        "mustache"
+      ]
+    }
   },
   "scripts": {
     "tmpl": "mustache src/data.json src/index.mustache -p ./src/logo.mustache > src/index.html",
     "watch": "npm-watch",
     "build": "parcel build src/index.html --out-dir ./docs --public-url ./9m88"
   },
-  "dependencies": {
-    "@squarespace/video-background-rendering": "^1.2.0",
-    "gatsby": "^2.15.29",
-    "gatsby-plugin-sass": "^2.1.17",
-    "node-sass": "^4.12.0",
-    "npm-watch": "^0.6.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
-  },
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "mustache": "^3.1.0",
+    "npm-watch": "^0.6.0",
     "prettier": "^1.18.2",
-    "sass": "^1.23.0",
-    "watch": "^1.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "sass": "^1.23.0"
   }
 }
