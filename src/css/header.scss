@@ -49,6 +49,8 @@
     top: 50%;
     margin-left: -0.5 * $width;
     margin-top: -0.5 * $height;
+    cursor: pointer;
+    z-index: 100;
   }
 
   .left {
@@ -155,6 +157,27 @@
     height: 0;
     transition: height $short $easeInOut;
     overflow: hidden;
+  }
+}
+
+
+.mobile_logo_container {
+  position: fixed;
+  top: $font-size-heading;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  visibility: hidden;
+  width: 100%;
+
+  .logo {
+    cursor: pointer;
+  }
+
+  @include mobile-breakpoint {
+    z-index: 100;
+    visibility: visible;
   }
 }
 

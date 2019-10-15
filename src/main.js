@@ -125,7 +125,16 @@
     }
   }
 
+  function headerBackToTop() {
+    document.querySelectorAll(".back_to_top_btn").forEach(btn => {
+      btn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+      })
+    })
+  }
+
   setupYoutube()
   parallex()
   expansion_header()
+  headerBackToTop()
 })()

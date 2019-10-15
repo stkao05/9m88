@@ -143,3 +143,12 @@ a[name] {
   clear: both;
   display: table;
 }
+
+
+.btn_unstyled {
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
