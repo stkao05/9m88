@@ -1,4 +1,4 @@
-name: Node CI
+name: Build and deploy
 
 on: [push]
 
@@ -24,3 +24,11 @@ jobs:
         npm run build
       env:
         CI: true
+	- name: Commit changed files
+	  uses: stefanzweifel/git-auto-commit-action@v2.3.0
+	  with:
+		commit_message: Auto-build
+		branch: ${{ github.head_ref }}
+		file_pattern: docs/\*.*
+	  env:
+		GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
