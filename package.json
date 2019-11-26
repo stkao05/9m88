@@ -14,13 +14,14 @@
     }
   },
   "scripts": {
-    "tmpl": "mustache src/data.json src/index.mustache -p ./src/logo.mustache > src/index.html",
+    "tmpl": "mustache src/site_data.json src/index.mustache -p ./src/logo.mustache > src/index.html",
     "watch:tmpl": "npm-watch",
     "watch:server": "parcel src/index.html",
     "build": "parcel build src/index.html --out-dir ./docs"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "csvtojson": "^2.0.10",
     "gulp": "^4.0.2",
     "mustache": "^3.1.0",
     "npm-watch": "^0.6.0",
