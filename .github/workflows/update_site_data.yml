@@ -20,7 +20,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm ci
-        node ./fetchData.js
+        npm run update_site_data
         npm run tmpl
         npm run build
       env:
