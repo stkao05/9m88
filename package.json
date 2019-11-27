@@ -26,6 +26,7 @@
     "gulp": "^4.0.2",
     "mustache": "^3.1.0",
     "npm-watch": "^0.6.0",
+    "parcel-plugin-mustache-html": "^1.0.2",
     "prettier": "^1.18.2",
     "sass": "^1.23.0",
     "tabletop": "^1.6.2"
