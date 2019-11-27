@@ -29,8 +29,18 @@
       "location": "Denver, CO"
     },
     {
-      "time": "11/20/2019",
+      "time": "19 October 2019",
       "venue": "Legacy",
+      "location": "Taipei, Taiwan"
+    },
+    {
+      "time": "19 October 2019",
+      "venue": "TICC",
+      "location": "Taipei, Taiwan"
+    },
+    {
+      "time": "20 October 2019",
+      "venue": "台北小巨蛋",
       "location": "Taipei, Taiwan"
     }
   ]
