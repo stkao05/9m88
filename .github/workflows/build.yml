@@ -1,4 +1,4 @@
-name: Update site data
+name: Fetch and build
 
 on: [repository_dispatch]
 
@@ -21,7 +21,6 @@ jobs:
       run: |
         npm ci
         npm run update_site_data
-        npm run tmpl
         npm run build
       env:
         CI: true
