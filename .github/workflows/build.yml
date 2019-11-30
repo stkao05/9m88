@@ -38,4 +38,4 @@ jobs:
       run: |
         curl --request POST \
         --url https://api.github.com/repos/stkao05/9m88/pages/builds \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
+        --header 'authorization: Bearer ${{ secrets.personal_token }}'
