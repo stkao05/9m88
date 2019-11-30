@@ -1,6 +1,10 @@
 name: Fetch and build
 
-on: [push, repository_dispatch]
+on:
+  push
+  repository_dispatch
+  schedule:
+      - cron: "*/15 * * * *"
 
 jobs:
   build:
