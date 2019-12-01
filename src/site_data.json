@@ -21,17 +21,20 @@
     {
       "time": "09 October 2019",
       "venue": "The Wall Live House",
-      "location": "Taipei, Taiwan"
+      "location": "Taipei, Taiwan",
+      "link": "https://google.com"
     },
     {
       "time": "7 November 2019",
       "venue": "Legacy",
-      "location": "Taipei, Taiwan"
+      "location": "Taipei, Taiwan",
+      "link": "https://google.com"
     },
     {
       "time": "2 January 2020",
       "venue": "TICC",
-      "location": "Taipei, Taiwan"
+      "location": "Taipei, Taiwan",
+      "link": "https://google.com"
     }
   ]
 }
