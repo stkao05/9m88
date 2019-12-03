@@ -13,7 +13,7 @@ const DEFAULT_DATA = {
   album_songs: [
     "01 Intro - She Is",
     "02 平庸之上 Beyond Mediocrity",
-    "03 最高品質靜悄悄 Airplane Mode",
+    "03 最高品質靜悄悄 Airplane Mode feat. Leo王",
     "04 Aim High",
     "05 浪費時間 Waste Of Time",
     "06 廚餘戀人 Leftlovers",
