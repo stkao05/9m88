@@ -155,9 +155,17 @@
                     <td>{{venue}}</td>
                     <td>{{location}}</td>
                     <td class="ticket">
+                        {{^soldout}}
                         <a class="btn btn_invert" href="{{link}}" target="_blank">
-                    Ticket
-                  </a>
+                            Ticket
+                        </a>
+                        {{/soldout}}
+
+                        {{#soldout}}
+                        <a class="btn btn_invert" href="{{link}}" target="_blank">
+                            Soldout
+                        </a>
+                        {{/soldout}}
                     </td>
                 </tr>
                 {{/tours}}
@@ -172,9 +180,13 @@
                 <div class="event_location">{{location}}</div>
 
                 <div>
+                    {{#soldout}}
                     <a class="btn btn_invert" href="{{link}}" target="_blank">
-                  Ticket
-                </a>
+                      Soldout
+                    </a> {{/soldout}} {{^soldout}}
+                    <a class="btn btn_invert" href="{{link}}" target="_blank">
+                      Ticket
+                    </a> {{/soldout}}
                 </div>
             </li>
             {{/tours}}

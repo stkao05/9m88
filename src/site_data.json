@@ -19,22 +19,39 @@
   ],
   "tours": [
     {
-      "time": "09 October 2019",
-      "venue": "The Wall Live House",
-      "location": "Taipei, Taiwan",
-      "link": "https://google.com"
+      "time": "08 December 2019",
+      "venue": "2019 Simple Urban 簡單生活節",
+      "location": "Taipei,Taiwan",
+      "link": "http://simplelife.streetvoice.com/",
+      "soldout": false
     },
     {
-      "time": "7 November 2019",
-      "venue": "Legacy",
-      "location": "Taipei, Taiwan",
-      "link": "https://google.com"
+      "time": "11 December 2019",
+      "venue": "TTN",
+      "location": "Hong Kong",
+      "link": "https://www.ticketflap.com/9m88",
+      "soldout": false
     },
     {
-      "time": "2 January 2020",
-      "venue": "TICC",
-      "location": "Taipei, Taiwan",
-      "link": "https://google.com"
+      "time": "12 December 2019",
+      "venue": "TTN",
+      "location": "Hong Kong",
+      "link": "https://www.ticketflap.com/9m88",
+      "soldout": false
+    },
+    {
+      "time": "1 January 2019",
+      "venue": "To Be Announced",
+      "location": "Taipei,Taiwan",
+      "link": "",
+      "soldout": false
+    },
+    {
+      "time": "4 January 2019",
+      "venue": "City Roars Festival",
+      "location": "Kuala Lumpur, Malaysia",
+      "link": "http://proticket.com.my/klpac-city-roars-festival-2020/",
+      "soldout": false
     }
   ]
 }

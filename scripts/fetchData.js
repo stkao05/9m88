@@ -22,23 +22,7 @@ const DEFAULT_DATA = {
     "09 Inner",
     "10 如果可以 If I Could",
   ],
-  tours: [
-    {
-      time: "09 October 2019",
-      venue: "The Wall Live House 這牆音樂藝文展演空間",
-      location: "Taipei, Taiwan",
-    },
-    {
-      time: "19 October 2019",
-      venue: "Pepsi Center",
-      location: "Denver, CO",
-    },
-    {
-      time: "01 November 2019",
-      venue: "EagleBank Arena",
-      location: "Fairfax, VA",
-    },
-  ],
+  tours: [],
 }
 
 // configuration
@@ -88,6 +72,13 @@ const createDataJson = () => {
     .fromFile(TOUR_CSV_PATH)
     .then(tours => {
       checkFields(tours)
+
+      tours = tours.map(x => {
+        return {
+          ...x,
+          soldout: x.soldout === "yes" ? true : false,
+        }
+      })
 
       const siteData = { ...DEFAULT_DATA, tours }
       const dataJson = JSON.stringify(siteData, null, 2)
