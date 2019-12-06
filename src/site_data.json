@@ -23,35 +23,35 @@
       "venue": "2019 Simple Urban 簡單生活節",
       "location": "Taipei,Taiwan",
       "link": "http://simplelife.streetvoice.com/",
-      "sold out?": "no"
+      "soldout": "no"
     },
     {
       "time": "11 December 2019",
       "venue": "TTN",
       "location": "Hong Kong",
       "link": "https://www.ticketflap.com/9m88",
-      "sold out?": "no"
+      "soldout": "no"
     },
     {
       "time": "12 December 2019",
       "venue": "TTN",
       "location": "Hong Kong",
       "link": "https://www.ticketflap.com/9m88",
-      "sold out?": "no"
+      "soldout": "no"
     },
     {
       "time": "1 January 2019",
       "venue": "To Be Announced",
       "location": "Taipei,Taiwan",
       "link": "",
-      "sold out?": "no"
+      "soldout": "no"
     },
     {
       "time": "4 January 2019",
       "venue": "City Roars Festival",
       "location": "Kuala Lumpur, Malaysia",
       "link": "http://proticket.com.my/klpac-city-roars-festival-2020/",
-      "sold out?": "no"
+      "soldout": "yes"
     }
   ]
 }
