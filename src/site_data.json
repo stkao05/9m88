@@ -19,25 +19,18 @@
   ],
   "tours": [
     {
-      "time": "08 December 2019",
-      "venue": "2019 Simple Urban 簡單生活節",
-      "location": "Taipei,Taiwan",
-      "link": "http://simplelife.streetvoice.com/",
-      "soldout": false
-    },
-    {
       "time": "11 December 2019",
       "venue": "TTN",
       "location": "Hong Kong",
       "link": "https://www.ticketflap.com/9m88",
-      "soldout": false
+      "soldout": true
     },
     {
       "time": "12 December 2019",
       "venue": "TTN",
       "location": "Hong Kong",
       "link": "https://www.ticketflap.com/9m88",
-      "soldout": false
+      "soldout": true
     },
     {
       "time": "1 January 2019",
