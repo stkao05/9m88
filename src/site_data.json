@@ -17,13 +17,5 @@
     "09 Inner",
     "10 如果可以 If I Could"
   ],
-  "tours": [
-    {
-      "time": "29 February 2020",
-      "venue": "搖搖滾滾音樂節北場",
-      "location": "New Taipei City",
-      "link": "https://tickets.udnfunlife.com/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=N08EMA2L&utm_source=uEVENTm_2020yorock&utm_medium=uevent&utm_campaign=2020yorock&utm_term=website",
-      "soldout": false
-    }
-  ]
+  "tours": []
 }
