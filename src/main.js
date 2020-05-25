@@ -1,6 +1,10 @@
 ;(function() {
   var BREAKPOINT = 700
 
+  var youtubeVideoId = "aobDr6nfs9k"
+  var videoWidth = 560
+  var videoHeight = 315
+
   function expansion_header() {
     var menu = document.querySelector(".menu")
     var header = document.querySelector(".expansion_header")
@@ -55,14 +59,11 @@
     var playerElementId = "youtube_player"
     var player
 
-    var videoWidth = 1000
-    var videoHeight = 677
-
     function onYouTubePlayerAPIReady() {
       player = new YT.Player(playerElementId, {
         width: window.innerWidth,
         height: window.innerWidth / (videoWidth / videoHeight),
-        videoId: "dimqEPg0NpE",
+        videoId: youtubeVideoId,
         playerVars: {
           autoplay: 0,
           autohide: 1,
